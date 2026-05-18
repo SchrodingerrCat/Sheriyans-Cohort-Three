@@ -1,3 +1,4 @@
+/*
 @font-face {
     font-family: 'Roboto';
     src: url(./font/Roboto-VariableFont.ttf);
@@ -175,4 +176,290 @@ nav{
     margin-top: 3%;
     font-weight: 300;
     opacity: 0.3;
+}
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+}
+
+.heading{
+    height: 80px;
+    width: 100% ;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+}
+
+.heading h1{
+    margin-bottom: -32px;
+}
+
+.heading img{
+    height: 50%;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.card{
+    height: 320px;
+    width: 22%;
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(19, 15, 14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.card:first-child{
+    border: 1px solid rgba(162, 88, 30);
+    box-shadow: 0 0 20px rgba(253, 72, 10, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.oval{
+    display: flex;
+    background: none;
+    border: 1px solid rgb(162, 88, 30);
+    color: rgb(162, 88, 30);
+    border-radius: 30px;
+    padding: 5px 8px;
+    font-size: small;
+    position: absolute;
+    
+}
+
+.cards .card .oval{
+    top: 5%;
+    left: 7%;
+}
+
+.card .image{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.card .image img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.drink-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drink-name{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.drink-genre{
+    font-size: 11px;
+    font-weight: 100;
+    padding-top: 3px;
+}
+
+.dash{
+    color: rgb(162, 88, 30);
+    padding-top: 2px;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.price{
+    font-weight: 600;
+    font-size: 17px;
+    color: rgb(162, 88, 30);
+}
+
+.chef-special{
+    width: 95%;
+    height: 215px;
+    border: 1px solid transparent;
+    margin-top: 1%;
+    align-self: center;
+    border-radius: 30px;
+    overflow: hidden ;
+    position: relative;
+    z-index: 1;
+}
+
+.chef-special::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgb(162, 88, 30) 0%, rgba(162, 88, 30, 0) 20%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.chef-special{
+    display: flex;
+    position: relative;
+}
+
+.chef-special img{
+    position: absolute;
+    left: 3%;
+    /* margin-top: -3%; */
+    height: 100%;
+}
+
+.chef-special .chef-special-content{
+    position: absolute;
+    right: 50%;
+    top: 7%;
+
+}
+
+.chef-special .chef-special-content h4{
+    color: rgb(162, 88, 30);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: smaller;
+}
+
+.chef-special .chef-special-content p{
+    font-weight: 100;
+    font-size: smaller;
+    opacity: 0.7;
+}
+
+.chef-special .chef-special-content p{
+    padding-top: 1.5%;
+}
+
+.chef-special .chef-special-content p.dish-description{
+    padding-top: 3%;
+    margin-bottom: 4%;
+}
+
+.oval .explore-more{
+    padding: 5px 20px;
+}
+
+.chef-special-content .oval{
+    margin-left: -0.5%;
+}
+
+.explore-more i{
+    font-size: 1rem;
+}
+
+hr{
+    background-color: rgb(162, 88, 30,0.5);
+    height: 0.5px;
+    width: 100%;
+    border: none;
+}
+
+footer{
+    height: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-top: 0.3%;
+}
+
+footer .halves{
+    height: 100%;
+    width: 20%;
+    opacity: 0.5;
+    font-size: 14px;
+    text-shadow: 2px 2px 4px rgba(252, 252, 252, 0.7)
+
+}
+
+footer .halves:nth-child(2) {
+    width: 40%;
+}
+
+footer .halves:nth-child(3) {
+    width: 25%;
+}
+
+.first-half{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-half{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.second-half i{
+    font-size: 6px;
+    color: rgb(199, 103, 30);
+    text-shadow: none;
+}
+
+.third-half{
+    display: flex;
+    align-items: center;
+    padding-left: 12%;
+
+}
+
+.icons{
+    padding-left: 10%;
+}
+
+.circle-around{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid rgb(162, 88, 30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline;
+    padding: 3px;
+    margin-right: 8px;
+    text-shadow: none;
 }
